@@ -13,21 +13,24 @@ public class HelloWorldSwing {
         JFrame frame = new JFrame("HelloWorldSwing");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //Add the ubiquitous "Hello World" label.
+        JPanel panel = new JPanel();
+				frame.getContentPane().add(panel);
+
+				//Add the ubiquitous "Hello World" label.
         JLabel label = new JLabel("Hello World");
-        frame.getContentPane().add(label);
+        panel.add(label);
 
         //Add the less-ubiquitous "compile" button.
         JButton compile = new JButton("compile!");
-        frame.getContentPane().add(compile);
+        panel.add(compile);
 
         //Add the somewhat un-ubiquitous "step" button.
         JButton step = new JButton("step!");
-        frame.getContentPane().add(step);
+        panel.add(step);
         
         //Add the totally un-ubiquitous "compute" button.
         JButton compute = new JButton("compute!");
-        frame.getContentPane().add(compute);       
+        panel.add(compute);       
 
         //Display the window.
         frame.pack();
